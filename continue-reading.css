@@ -1,0 +1,17 @@
+.continueReading--button-container {
+	display: none;
+}
+
+@media ( max-width: 767px ) {
+	.continueReading--button-container {
+		display: block;
+	}
+
+	.continueReading--button {
+		width: 100%;
+	}
+
+	.continueReading--hidden {
+		display: none;
+	}
+}
