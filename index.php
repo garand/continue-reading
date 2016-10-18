@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Continue Reading
- * Version: 1.0.5
+ * Version: 1.0.6
  * Plugin URI: http://garand.me
  * Description: Show "Continue Reading" button on single article pages
  * Author: Anthony Garand
@@ -22,7 +22,7 @@ add_filter( 'the_content', 'add_continue_reading_button', 10 );
  */
 function add_continue_reading_button( $content ) {
 
-	if ( is_single() ) {
+	if ( is_single() && preg_match( '/<p><span id=\"more-(.*?)\">(.*?)<\/span><\/p>/', $content ) ) {
 
 		wp_register_style('continue-reading-style', plugins_url('continue-reading.css',__FILE__ ));
 		wp_register_script('continue-reading-script', plugins_url('continue-reading.js',__FILE__ ));
@@ -36,7 +36,7 @@ function add_continue_reading_button( $content ) {
 			<div class="continueReading--hidden">
 		';
 
-		$content = preg_replace( '/<p><span id=\"(.*?)\">(.*?)<\/span><\/p>/', $continue_reading, $content );
+		$content = preg_replace( '/<p><span id=\"more-(.*?)\">(.*?)<\/span><\/p>/', $continue_reading, $content );
 
 		$content .= '</div>';
 
