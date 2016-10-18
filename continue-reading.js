@@ -5,7 +5,7 @@ jQuery(function($) {
 		$(this).hide();
 	});
 
-	var firstWidget = $(".wpb_wrapper").children().first();
+	var firstWidget = $(".td-ss-main-sidebar").children().first();
 
 	continueReadingMoveAd();
 
@@ -18,7 +18,7 @@ jQuery(function($) {
 			firstWidget.insertAfter('.continueReading--hidden');
 		}
 		else {
-			$(".wpb_wrapper").prepend(firstWidget);	
+			$(".td-ss-main-sidebar").prepend(firstWidget);	
 		}
 	}
 
