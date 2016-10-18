@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Continue Reading
- * Version: 1.0.1
+ * Version: 1.0.2
  * Plugin URI: http://garand.me
  * Description: Show "Continue Reading" button on single article pages
  * Author: Anthony Garand

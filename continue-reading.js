@@ -15,7 +15,6 @@ jQuery(function($) {
 
 	function continueReadingMoveAd() {
 		if ( $(document).width() < 768 ) {
-			$(".entry-content").append(firstWidget);	
 			firstWidget.insertAfter('.continueReading--hidden');
 		}
 		else {
