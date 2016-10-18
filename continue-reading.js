@@ -2,7 +2,7 @@ jQuery(function($) {
 
 	$(".continueReading--button").on( "click", function() {
 		$(".continueReading--hidden").slideToggle();
-		$(this).hide();
+		$(this).parent().remove();
 	});
 
 	var firstWidget = $(".td-ss-main-sidebar").children().first();
