@@ -5,7 +5,7 @@ jQuery(function($) {
 		$(this).hide();
 	});
 
-	var firstWidget = $(".sidebar").children().first();
+	var firstWidget = $(".wpb_wrapper").children().first();
 
 	continueReadingMoveAd();
 
@@ -16,9 +16,10 @@ jQuery(function($) {
 	function continueReadingMoveAd() {
 		if ( $(document).width() < 768 ) {
 			$(".entry-content").append(firstWidget);	
+			firstWidget.insertAfter('.continueReading--hidden');
 		}
 		else {
-			$(".sidebar").prepend(firstWidget);	
+			$(".wpb_wrapper").prepend(firstWidget);	
 		}
 	}
 
